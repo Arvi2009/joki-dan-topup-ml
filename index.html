@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOKI ML SHOP - Jasa Joki & Top Up Mobile Legends</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">JOKI ML SHOP</div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+      <ul class="nav-menu">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <!-- Removed cart icon from navbar -->
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="beranda" class="hero">
+    <div class="hero-bg">
+      <img src="https://source.unsplash.com/featured/?mobile-legends,game" alt="Mobile Legends Character" />
+    </div>
+    <div class="hero-content">
+      <h1>Jasa Joki & Top Up Mobile Legends Termurah & Terpercaya!</h1>
+      <p>Pro Player | Fast Process | 100% Aman</p>
+      <a href="#layanan" class="btn hero-btn">Lihat Layanan</a>
+    </div>
+  </section>
+
+  <section id="layanan" class="services">
+    <h2>Layanan Kami</h2>
+    <div class="service-cards">
+      
+      <div class="card">
+        <h3>🔥 Joki per Rank</h3>
+        <p>Naikkan rank Mobile Legends kamu dari rank saat ini ke rank yang diinginkan dengan layanan profesional kami.</p>
+        <p class="price">Harga sesuai rank yang dipilih</p>
+        <input type="text" placeholder="Nickname ML" class="nickname" />
+        <input type="text" placeholder="ID ML (ID(Server))" class="mlid" />
+        <label for="rank-select-joki-start">Pilih Rank Awal:</label>
+        <select id="rank-select-joki-start" class="rank-select-joki-start">
+          <option value="warrior">Warrior</option>
+          <option value="elite">Elite</option>
+          <option value="master">Master</option>
+          <option value="grandmaster">Grandmaster</option>
+          <option value="epic">Epic</option>
+          <option value="legend">Legend</option>
+          <option value="mythic">Mythic</option>
+        </select>
+        <label for="rank-select-joki-end">Pilih Rank Tujuan:</label>
+        <select id="rank-select-joki-end" class="rank-select-joki-end">
+          <option value="warrior">Warrior</option>
+          <option value="elite">Elite</option>
+          <option value="master">Master</option>
+          <option value="grandmaster">Grandmaster</option>
+          <option value="epic">Epic</option>
+          <option value="legend">Legend</option>
+          <option value="mythic">Mythic</option>
+        </select>
+        <button class="btn add-to-cart" data-name="Joki per Rank" data-price="0">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <h3>⚔️ Jasa Win Rate Boosting</h3>
+        <p>Tingkatkan win rate kamu dengan jasa boosting dari pemain berpengalaman.</p>
+        <p class="price">Rp 20.000 - Rp 250.000</p>
+        <input type="text" placeholder="Nickname ML" class="nickname" />
+        <input type="text" placeholder="ID ML (ID(Server))" class="mlid" />
+        <button class="btn add-to-cart" data-name="Jasa Win Rate Boosting" data-price="200000">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <h3>💎 Top Up Diamond (60 - 1000++)</h3>
+        <p>Top up diamond Mobile Legends dengan harga terbaik dan proses cepat.</p>
+        <p class="price">Rp 10.000 - Rp 500.000</p>
+        <input type="text" placeholder="Nickname ML" class="nickname" />
+        <input type="text" placeholder="ID ML (ID(Server))" class="mlid" />
+        <button class="btn add-to-cart" data-name="Top Up Diamond (60 - 1000++)" data-price="100000">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <h3>⭐ Jasa Penaikan Rank per Bintang</h3>
+        <p>Naikkan rank Mobile Legends kamu per bintang dengan layanan profesional kami.</p>
+        <p class="price">Rp 15.000 - Rp 100.000</p>
+        <input type="text" placeholder="Nickname ML" class="nickname" />
+        <input type="text" placeholder="ID ML (ID(Server))" class="mlid" />
+        <label for="rank-select">Pilih Rank:</label>
+        <select id="rank-select" class="rank-select">
+          <option value="warrior">Warrior</option>
+          <option value="elite">Elite</option>
+          <option value="master">Master</option>
+          <option value="grandmaster">Grandmaster</option>
+          <option value="epic">Epic</option>
+          <option value="legend">Legend</option>
+          <option value="mythic">Mythic</option>
+        </select>
+        <label for="star-count">Pilih jumlah bintang yang ingin dinaikkan:</label>
+        <select id="star-count" class="star-count">
+          <option value="1">1 Bintang</option>
+          <option value="2">2 Bintang</option>
+          <option value="3">3 Bintang</option>
+          <option value="4">4 Bintang</option>
+          <option value="5">5 Bintang</option>
+        </select>
+        <button class="btn add-to-cart" data-name="Jasa Penaikan Rank per Bintang" data-price="15000">Tambah ke Keranjang</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="cart" class="cart-section">
+    <h2>Keranjang Belanja</h2>
+    <div class="cart-items"></div>
+    <div class="cart-total">
+      Total: <span id="total-price">Rp 0</span>
+    </div>
+<a id="wa-btn" href="#checkout" class="btn disabled">Silahkan isi formulir untuk melanjutkan transaksi</a>
+  </section>
+
+  <section id="checkout" class="checkout-section">
+    <h2>Formulir Checkout</h2>
+    <form id="checkout-form">
+      <label for="full-name">Nama Lengkap</label>
+      <input type="text" id="full-name" name="fullName" required />
+
+      <label for="ml-id-server">ID & Server Mobile Legends</label>
+      <input type="text" id="ml-id-server" name="mlIdServer" placeholder="123456789 (321)" required />
+
+      <label for="email">Email (opsional)</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="payment-method">Metode Pembayaran</label>
+      <select id="payment-method" name="paymentMethod" required>
+        <option value="">Pilih Metode</option>
+        <option value="Dana">Dana</option>
+        <option value="OVO">OVO</option>
+        <option value="GoPay">GoPay</option>
+        <option value="BCA">BCA</option>
+      </select>
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="agreement" name="agreement" required />
+        ✓ Saya setuju layanan diproses setelah pembayaran
+      </label>
+
+      <button type="submit" class="btn">Kirim Pesanan ke WhatsApp</button>
+    </form>
+  </section>
+
+  <footer id="kontak" class="footer">
+    <div class="contact-info">
+      <p>Kontak:</p>
+      <p>WA: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></p>
+      <p>IG: <a href="https://instagram.com/jokimlshop" target="_blank">@jokimlshop</a></p>
+      <p>TikTok: <a href="https://tiktok.com/@jokimlshop" target="_blank">@jokimlshop</a></p>
+      <p>Jam operasional: Setiap hari, 09.00 - 22.00 WIB</p>
+    </div>
+    <p class="trademark">Mobile Legends: Bang Bang is trademark of Moonton</p>
+  </footer>
+
+  <a href="#cart" id="floating-cart-btn" title="Keranjang Belanja">🛒</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
